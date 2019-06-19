@@ -1,38 +1,43 @@
-import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-import styled from 'styled-componenets';
+import styled from 'styled-components';
 
 const NavStyled = styled.div`
-  .Navbar {
-    background-color: #0984e3;
-  }
-    a, Navbar, Nav {
-      color: #dfe6e9;
+  .nav-bar {
+    background-color: #222f3e;
+    margin: 0;
 
-      $:hover: #636e72;
+  }
+  Nav.Item, Nav.Link {
+    color: #fdcb6e;
+    margin: 0;
+
+      &:hover {
+      color: #d63031;
     }
+  }
 `;
 
-export const Navigator = () => (
-  <NavStyled>
-  <Navbar bg='light' expand='md' sticky='top'>
-    <Navbar.Brand href='/'>Store_Front</Navbar.Brand>
-    <Navbar.Toggle aria-controls='basic-navbar-nav' />
-    <Navbar.Collapse id='responsive-navbar-nav'>
-      <Nav className='nav-dark'>
-        <Nav.Item>
-          <Nav.Link>
-            <Link to="/Product">Fruits and Veggies.</Link>
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link>
-            <Link to="/">Bistro</Link>
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-  </NavStyled>
-)
+export class Navigator extends Component {
+  render() {
+    return (
+      <NavStyled>
+        <Navbar className='nav-bar' expand='md'>
+            <Navbar.Brand>
+              <Link to='/'>Store_Front</Link>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          <Navbar.Collapse className='mr-auto'>
+            <Nav className='ml-auto'>
+              <LinkContainer to='/Product'>
+                <Link>Fruits and Veggies</Link>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </NavStyled>
+    )
+  }
+}
