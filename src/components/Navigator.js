@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -8,10 +8,11 @@ const NavStyled = styled.div`
   .nav-bar {
     background-color: #222f3e;
     margin: 0;
+    height: 100%;
 
   }
-  Nav.Item, Nav.Link {
-    color: #fdcb6e;
+  a, Link, LinkContainer {
+    color: #dfe6e9;
     margin: 0;
 
       &:hover {
@@ -26,13 +27,20 @@ export class Navigator extends Component {
       <NavStyled>
         <Navbar className='nav-bar' expand='md'>
             <Navbar.Brand>
-              <Link to='/'>Store_Front</Link>
+              <Link to='/Home'>Store_Front</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
-          <Navbar.Collapse className='mr-auto'>
+          <Navbar.Collapse>
             <Nav className='ml-auto'>
               <LinkContainer to='/Product'>
-                <Link>Fruits and Veggies</Link>
+                <Link to='/Product'>
+                  Fruits and Veggies
+                </Link>
+              </LinkContainer>
+              <LinkContainer to='/Product'>
+                <Link to='/Product'>
+                  Bistro
+                </Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>
