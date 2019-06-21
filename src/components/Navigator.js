@@ -11,30 +11,37 @@ const NavStyled = styled.div`
     height: 100%;
 
   }
-  a, Link, LinkContainer {
+  a, Link, LinkContainer, navbar-brand {
     color: #dfe6e9;
-    margin: 0;
+    margin: 1em;
 
       &:hover {
       color: #d63031;
     }
   }
+
+  .navbar-toggler-icon, .navbar-toggler {
+    background-color: #b2bec3;
+  }
+    &:hover {
+      background-color: #d63031;
+    }
 `;
 
 export class Navigator extends Component {
   render() {
     return (
       <NavStyled>
-        <Navbar className='nav-bar' expand='md'>
+        <Navbar className='nav-bar' expand='lg'>
             <Navbar.Brand>
               <Link to='/Home'>Store_Front</Link>
             </Navbar.Brand>
-            <Navbar.Toggle />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
-            <Nav className='ml-auto'>
-              <LinkContainer to='/Product'>
-                <Link to='/Product'>
-                  Fruits and Veggies
+            <Nav className='mr-auto'>
+              <LinkContainer to='/Fruit_Vegi'>
+                <Link to='/Fruit_Vegi'>
+                  Fruits and Veggies   
                 </Link>
               </LinkContainer>
               <LinkContainer to='/Product'>
@@ -46,6 +53,6 @@ export class Navigator extends Component {
           </Navbar.Collapse>
         </Navbar>
       </NavStyled>
-    )
+    );
   }
 }

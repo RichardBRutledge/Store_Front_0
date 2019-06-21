@@ -1,15 +1,18 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 
 const CardStyled = styled.div`
 .item {
-  display: block;
-  padding: 1rem;
-  font-size: 30px;
-  margin: 1rem;
+  display: inline-block;
+  padding: .5em;
+  font-size: 22px;
+  margin: .5rem;
   width: 20rem;
-  height: 30rem;
+  height: 25rem;
+  background-color: white;
 }
 .image {
   width: 18rem;
@@ -17,7 +20,7 @@ const CardStyled = styled.div`
 }
 `;
 
-export const Product = props => {
+export const Products = props => {
   return (
   <CardStyled>
     <Card className='item'>
@@ -30,9 +33,13 @@ export const Product = props => {
           <Card.Text>
           {props.text}
         </Card.Text>
-          <Card.Text>
-          {props.price}
-        </Card.Text>
+          <Button >
+            <LinkContainer>
+              <Link to={props.pay}>
+                {props.price}
+              </Link>
+            </LinkContainer>
+          </Button>
       </Card.Body>
     </Card>
   </CardStyled>

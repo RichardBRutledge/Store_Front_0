@@ -6,7 +6,7 @@ export const Home = () => (
     <div>
         <Jumbotron>
             <h1>20% off a tomato!</h1>
-            <Link to='/Product'>
+            <Link to='/Fruit_Vegi'>
                 <Button>Get it!</Button>
             </Link>
         </Jumbotron>
