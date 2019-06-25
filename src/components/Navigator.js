@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, NavbarBrand, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -28,29 +28,36 @@ const NavStyled = styled.div`
     }
 `;
 
-export class Navigator extends Component {
+export default class Navigator extends Component {
   render() {
     return (
       <NavStyled>
-        <Navbar className='nav-bar' expand='lg'>
-            <Navbar.Brand>
-              <Link to='/Home'>Store_Front</Link>
-            </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse>
-            <Nav className='mr-auto'>
-              <LinkContainer to='/Fruit_Vegi'>
-                <Link to='/Fruit_Vegi'>
-                  Fruits and Veggies   
-                </Link>
+        <Navbar>
+          <NavbarBrand href='/home'>
+            F. F.
+          </NavbarBrand>
+          <Nav>
+            <NavItem>
+              <LinkContainer to=''>
+                <Link to=''>Bistro</Link>
               </LinkContainer>
-              <LinkContainer to='/Product'>
-                <Link to='/Product'>
-                  Bistro
-                </Link>
+            </NavItem>
+            <NavItem>
+              <LinkContainer to=''>
+                <Link to=''>Produce</Link>
               </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
+            </NavItem>
+            <NavItem>
+              <LinkContainer to=''>
+                <Link to=''>Frozen</Link>
+              </LinkContainer>
+            </NavItem>
+            <NavItem className=''>
+              <LinkContainer to=''>
+                <Link to='' className='ml-auto'>Frozen</Link>
+              </LinkContainer>
+            </NavItem>
+          </Nav>
         </Navbar>
       </NavStyled>
     );

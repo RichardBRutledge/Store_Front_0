@@ -34,11 +34,7 @@ export const Products = props => {
           {props.text}
         </Card.Text>
           <Button >
-            <LinkContainer>
-              <Link to={props.pay}>
-                {props.price}
-              </Link>
-            </LinkContainer>
+            Purchase
           </Button>
       </Card.Body>
     </Card>
