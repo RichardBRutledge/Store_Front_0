@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -20,7 +20,8 @@ const CardStyled = styled.div`
 }
 `;
 
-export const Products = props => {
+export class Product extends Component {
+
   return (
   <CardStyled>
     <Card className='item'>
