@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavItem, Button } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -29,41 +27,24 @@ export default class Navigator extends Component {
   render() {
     return (
       <NavStyled>
-        <Navbar>
-          <Navbar.Toggle />
-          <Navbar.Collapse />
-          <NavbarBrand href='/home'>
-            <img 
-              src='../img/Foody Cropped.jpg'
-              height='40px'
-              width='90px'
-            />
-          </NavbarBrand>
-          <Nav>
-            <NavItem>
-              <LinkContainer to=''>
-                <Link to=''>Bistro</Link>
-              </LinkContainer>
-            </NavItem>
-            <NavItem>
-              <LinkContainer to=''>
-                <Link to=''>Produce</Link>
-              </LinkContainer>
-            </NavItem>
-            <NavItem>
-              <LinkContainer to=''>
-                <Link to=''>Frozen</Link>
-              </LinkContainer>
-            </NavItem>
-          </Nav>
-          <Nav className='ml-auto'>
-            <NavItem>
-              <LinkContainer to=''>
-                <Button>Shopping cart</Button>
-              </LinkContainer>
-            </NavItem>
-          </Nav>
-        </Navbar>
+        <nav className='navbar navbar-expand-sm navbar-dark px-sm-5'>
+          <Link to="/">
+            logo Holder
+          </Link>
+          <ul className='navbar-nav align-content-center'>
+            <li>
+              <Link to='/' className='nav-link'>
+                products
+              </Link>
+            </li>
+          </ul>
+          <Link to='/cart' className='ml-auto'>
+            <button>
+              <i className='fas fa-cart-plus' />
+              my cart
+            </button>
+          </Link>
+        </nav>
       </NavStyled>
     );
   }

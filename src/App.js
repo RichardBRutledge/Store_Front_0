@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
-import Header_ from './components/Header_';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Switch, Route } from 'react-router-dom';
 import Navigator from './components/Navigator';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import { ProductProvider } from "./context";
+import ProductList from './components/ProductList';
+import Details from './components/Details';
+import Cart from './components/Cart';
+import Default from './components/Default'
+/*import { storeProducts } from '../data';*/
+/*import { ProductProvider } from "./src/context";*/
 
 export default class App extends Component {
   render() { 
     return (
       <>
-      <Router>
-      <Navigator />
-      </Router>
-      <Header_ />
+        <Navigator />
+          <Switch>
+            <Route exact path='/' Component={ProductList} />
+            <Route exact path='/details' Component={Details} />
+            <Route exact path='/cart' Component={Cart} />
+            <Route Component={Default} />
+          </Switch>
+          <ProductList />
       </>
     );  
   }
