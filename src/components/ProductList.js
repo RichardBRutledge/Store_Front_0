@@ -3,14 +3,12 @@ import { ProductConsumer } from '../Context';
 import { Head } from './Head';
 import Product from './Product';
 
-export default class ProductList extends Component {
-  render() {
+export default function ProductList(product) {
     return (
       <>
         <div className='py-5'>
           <div className='container'>
             <Head name='our' title='products' />
-
             <div className='row'>
               <ProductConsumer>
                 {value => {
@@ -25,4 +23,3 @@ export default class ProductList extends Component {
       </>
     )
   }
-}
