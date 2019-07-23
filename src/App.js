@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route } from 'react-router-dom';
 import Navigator from './components/Navigator';
@@ -12,16 +13,16 @@ import Default from './components/Default'
 export default class App extends Component {
   render() { 
     return (
-      <>
+      <div className='body'>
         <Navigator />
           <Switch>
-            <Route exact path='/' Component={ProductList} />
-            <Route exact path='/details' Component={Details} />
-            <Route exact path='/cart' Component={Cart} />
+            <Route exact path='/' component={ProductList} />
+            <Route exact path='/details' component={Details} />
+            <Route exact path='/cart' component={Cart} />
             <Route Component={Default} />
           </Switch>
-          <ProductList />
-      </>
+          
+      </div>
     );  
   }
 }

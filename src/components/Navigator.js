@@ -39,9 +39,9 @@ export default class Navigator extends Component {
             </li>
           </ul>
           <Link to='/cart' className='ml-auto'>
-            <button>
-              <i className='fas fa-cart-plus' />
-              my cart
+            <button className='btn btn-secondary'>
+              <i className='fas fa-cart-plus mr-2' />
+               My Cart
             </button>
           </Link>
         </nav>
