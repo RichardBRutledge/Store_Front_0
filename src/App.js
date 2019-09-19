@@ -6,7 +6,8 @@ import Navigator from './components/Navigator';
 import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
-import Default from './components/Default'
+import Default from './components/Default';
+import Modal from './components/Modal';
 /*import { storeProducts } from '../data';*/
 /*import { ProductProvider } from "./src/context";*/
 
@@ -19,9 +20,9 @@ export default class App extends Component {
             <Route exact path='/' component={ProductList} />
             <Route exact path='/details' component={Details} />
             <Route exact path='/cart' component={Cart} />
-            <Route Component={Default} />
+            <Route component={Default} />
           </Switch>
-          
+          <Modal />
       </div>
     );  
   }
