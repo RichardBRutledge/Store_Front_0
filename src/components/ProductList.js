@@ -3,7 +3,7 @@ import { ProductConsumer } from '../Context';
 import { Head } from './Head';
 import Product from './Product';
 
-export default function ProductList(product) {
+export default function ProductList() {
   return (
     <>
       <div className='container'>

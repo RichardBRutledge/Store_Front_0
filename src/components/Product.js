@@ -21,6 +21,7 @@ export default class Product extends Component {
                   <img
                     src={img}
                     alt='product'
+                    height='170rem'
                     className='card-img-top' />
                 </Link>
 

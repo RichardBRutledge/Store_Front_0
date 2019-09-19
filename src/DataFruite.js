@@ -4,7 +4,7 @@ export const storeProducts = [
         img: "https://www.foodsforbetterhealth.com/wp-content/uploads/2017/02/cabbage-750x400.jpg",
     title: "Cabbage",
     description: "This is cabbage.",
-    Price: 4,
+    price: 4,
     inCart: false,
     count: 0,
     total: 0
@@ -15,7 +15,7 @@ export const storeProducts = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDvkGKwAGNrtG3h7_pKBiqrF9w49bYCszGn_2EXdxeSwY8iiSyg",
     title: "Apple",
     description: "This is apple",
-    Price: 10,
+    price: 10,
     inCart: false,
     count: 0,
     total: 0
@@ -26,7 +26,7 @@ export const storeProducts = [
     img: 'https://cosmos-images2.imgix.net/file/spina/photo/13954/100118_Debunked_01.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835',
     title: 'Bannana',
     description: "This is bannana",
-    Price: 10,
+    price: 10,
     inCart: false,
     count: 0,
     total: 0
@@ -47,9 +47,12 @@ export const storeProducts = [
 
 export const detailProduct = {
     id: 1,
-    title:"This product",
-    img: "",
+    title: "Google Pixel - Black",
+    img: "img/product-1.png",
     price: 10,
+    company: "google",
+    info:
+        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
     inCart: false,
     count: 0,
     total: 0
