@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { storeProducts, detailProduct } from './DataFruite';
+import { storeProducts } from './DataFruite';
 
 const ProductContext = React.createContext();
 
@@ -10,7 +10,7 @@ class ProductProvider extends Component {
     detailProduct: false,
     cart: [],
     modelOpen: true,
-    modalProduct: detailProduct,
+    modalProduct: storeProducts,
     cartSubTotal: 0,
     cartTax: 0,
     cartTotal: 0,

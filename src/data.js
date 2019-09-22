@@ -1,3 +1,4 @@
+/*
 export const storeProducts = [
     {
         id: 1,
@@ -101,3 +102,4 @@ export const detailProduct = {
     count: 0,
     total: 0
 };
+*/

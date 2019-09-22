@@ -1,6 +1,5 @@
 import React from 'react'
 import CartItem from './CartItem'
-import ProductConsumer from '../../Context'
 const CartList = ({value}) => {
     const {cart} = value;
     console.log(cart);
