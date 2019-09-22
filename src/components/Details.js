@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import {ProductConsumer} from '../Context';
-import {Link} from 'react-router-dom'; 
+import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 export default class Details extends Component {
+    debugger;
     render() {
         return (
             <ProductConsumer>
                 {value => {
-                const {id, company, img, info, price, title, inCart} = value.detailProduct;
+                const {id, company, img, description, price, title, inCart,} = value.detailProduct;
+                if (value.detailProduct === false) {
+                    return(
+                    <Redirect to='/'/>
+                    )
+                } else {
                 return (
                     <div className='container py-5'>
                         <div className='row'>
@@ -34,7 +41,7 @@ export default class Details extends Component {
                                     about this product :
                                 </p>
                                 <p className='text-muted lead'>
-                                    {info}
+                                    {description}
                                 </p>
                                 <div>
                                     <Link to='/'>
@@ -52,7 +59,7 @@ export default class Details extends Component {
                             </div>
                         </div>
                     </div>
-                )
+                )}
                 }}
             </ProductConsumer>
         );
